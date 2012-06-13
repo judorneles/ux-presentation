@@ -1,1 +1,20 @@
-Presentation for workshop @ ThoughtWorks
+This is just a very basic presentation about user experience for the first workshop on experience design.
+
+I've used Reveal.js on top of a Sinatra app using Slim abstraction. Neat.
+
+Installation should be very straightforward:
+
+$ bundle install
+
+$ bundle exec ruby app.rb -p 3000
+
+After that you should be able to see the presentation on http://localhost:3000/
+
+ _______ 
+< Enjoy >
+ ------- 
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
