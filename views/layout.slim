@@ -1,0 +1,46 @@
+doctype html
+html[lang='en']
+  head
+    meta[charset='utf-8']
+    title What is User Experience?
+    meta[name="viewport" content="width=device-width, initial-scale=1.0"]
+    meta[name="apple-mobile-web-app-capable" content="yes"]
+    meta[name="apple-mobile-web-app-status-bar-style" content="black-translucent"]
+    link[rel="stylesheet" href="stylesheets/reset.css"]
+    link[rel="stylesheet" href="stylesheets/main.css"]
+  body
+    #reveal.reveal
+      == yield
+      / The navigational controls UI
+      aside.controls
+        a.left[href='#'] &#x25C4;
+        a.right[href='#'] &#x25BA;
+        a.up[href='#'] &#x25B2;
+        a.down[href='#'] &#x25BC;
+      / Displays presentation progress, max value changes via JS to reflect # of slides
+      .progress
+        span
+    script[src="javascripts/lib/classList.js"]
+    script[src="javascripts/reveal.js"]
+    javascript:
+      Reveal.addEventListener( 'slidechanged', function( event ) {
+        // event.previousSlide, event.currentSlide, event.indexh, event.indexv
+      });
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: false,
+        // Display a presentation progress bar
+        progress: true,
+        // If true; each slide will be pushed to the browser history
+        history: true,
+        // Loops the presentation, defaults to false
+        loop: false,
+        // Flags if mouse wheel navigation should be enabled
+        mouseWheel: false,
+        // Apply a 3D roll to links on hover
+        rollingLinks: true,
+        // UI style
+        theme: 'default', // default/neon
+        // Transition style
+        transition: 'linear' // default/cube/page/concave/linear(2d)
+      });
